@@ -1,0 +1,9 @@
+.App{
+  /* 요소들을 화면 가운데에 배치 */
+  width : 500px;
+  margin : auto; 
+
+  display : flex; /* App이라는 className을 갖는 요소 밑에 있는 자식요소의 배치를 유연하게 해줌(css에서 가장 많이 활용함) */
+  flex-direction: column; /* 열 기준으로 요소를 새로로 배치 */
+  gap : 10px; /* 요소 별로 10px 만큼 사이 간격(display가 flex라고 적용된 요소에만 사용 가능 */
+}
