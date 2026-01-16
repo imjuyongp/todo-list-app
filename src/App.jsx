@@ -5,30 +5,30 @@ import List from './components/List'
 
 import { useState, useRef } from 'react'
 
-const mockData = [
-    {
-      id : 0,
-      isDone : false,
-      content : "React study",
-      date : new Date().getTime(),
-    },
-    {
-      id : 1,
-      isDone : false,
-      content : "spring study",
-      date : new Date().getTime(),
-    },
-    {
-      id : 2,
-      isDone : false,
-      content : "kafka study",
-      date : new Date().getTime(),
-    },
-  ];
+// const mockData = [
+//     {
+//       id : 0,
+//       isDone : false,
+//       content : "React study",
+//       date : new Date().getTime(),
+//     },
+//     {
+//       id : 1,
+//       isDone : false,
+//       content : "spring study",
+//       date : new Date().getTime(),
+//     },
+//     {
+//       id : 2,
+//       isDone : false,
+//       content : "kafka study",
+//       date : new Date().getTime(),
+//     },
+//   ];
 
 function App() {
-  const [todos, setTodos] = useState(mockData) // Todo 목록 배열
-  const idRef = useRef(3)
+  const [todos, setTodos] = useState([]) // Todo 목록 배열
+  const idRef = useRef(0)
 
   const onCreate = (content) => { // 새 Todo 객체 생성 후 목록 맨 앞에 추가
     const newTodo = {
