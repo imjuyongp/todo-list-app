@@ -27,10 +27,10 @@ const mockData = [
   ];
 
 function App() {
-  const [todos, setTodos] = useState(mockData)
+  const [todos, setTodos] = useState(mockData) // Todo 목록 배열
   const idRef = useRef(3)
 
-  const onCreate = (content) => {
+  const onCreate = (content) => { // 새 Todo 객체 생성 후 목록 맨 앞에 추가
     const newTodo = {
       id : idRef.current++,
       isDone : false,
@@ -45,7 +45,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Editor onCreate={onCreate}/>
+      <Editor onCreate={onCreate}/> 
       <List />
     </div>
   )
