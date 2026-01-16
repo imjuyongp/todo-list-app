@@ -15,7 +15,7 @@ const List = ({todos}) => { // 부모 컴포넌트인 App.jsx에서 props로 전
       return todos;
     }
     return todos.filter((todo) => // 화살표 함수에서 {}를 빼면 암묵적으로 값을 return 함
-      todo.content.includes(search)
+      todo.content.toLowerCase().includes(search.toLowerCase())
     );
   };
 
